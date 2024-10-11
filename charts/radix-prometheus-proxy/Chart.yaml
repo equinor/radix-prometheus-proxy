@@ -2,7 +2,7 @@ apiVersion: v2
 name: radix-prometheus-proxy
 icon: https://radix.equinor.com/images/logos/logo.svg
 description: Simple Prometheus Proxy to expose a simple metric
-version: 0.1.0
+version: 1.0.0
 appVersion: 0.1.0 # appVersion should always be equal to version!
 kubeVersion: ">=1.24.0"
 keywords:
