@@ -1,0 +1,37 @@
+# Default values for charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: ghcr.io/equinor/radix-prometheus-proxy
+  tag: ""
+  pullPolicy: Always
+
+# Annotations to add to the Deployment
+deploymentAnnotations: {}
+# Extra pod labels
+podLabels: {}
+
+# Logging
+logLevel: info
+logPretty: "False"
+prometheusUrl: ""
+
+resources:
+  limits:
+    cpu: 50m
+    memory: 10Mi
+  requests:
+    cpu: 50m
+    memory: 10Mi
+
+# Affinity for pod scheduling
+affinity: {}
+
+# Node selector for pod scheduling
+nodeSelector: {}
+
+# Tolerations for pod scheduling
+tolerations: []
