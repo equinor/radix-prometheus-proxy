@@ -1,8 +1,7 @@
 name: Build Docker Image
 
 on:
-  release:
-    types: [created]
+  tag:
   push:
     branches:
       - main
