@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.1.0...v1.2.0) (2024-10-11)
+
+
+### Features
+
+* release helm charts ([#9](https://github.com/equinor/radix-prometheus-proxy/issues/9)) ([8d03462](https://github.com/equinor/radix-prometheus-proxy/commit/8d034621e1dd6cdf2f389c5d74ae0b3a203671cf))
+
 ## [1.1.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.0.0...v1.1.0) (2024-10-11)
 
 
