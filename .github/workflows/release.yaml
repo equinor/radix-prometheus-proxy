@@ -1,11 +1,9 @@
-name: Build Docker Image
+name: Build Release Docker Image
 
 on:
   push:
-    branches:
-      - main
-  pull_request: {}
-  workflow_dispatch:
+    tags:
+      - 'v*'
 
 jobs:
 
@@ -40,10 +38,7 @@ jobs:
         with:
           images: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
           tags: |
-            type=ref,event=branch
-            type=ref,event=tag
-            type=ref,event=pr
-            type=raw,value=latest-{{date 'YYYYMMDDHHmmss'}}-{{sha}}
+            type=semver
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -56,3 +51,30 @@ jobs:
           platforms: |
             linux/amd64
             linux/arm64
+
+
+  build-helm-chart:
+    name: Build Helm chart
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
