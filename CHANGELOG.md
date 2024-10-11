@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.2.0...v1.3.0) (2024-10-11)
+
+
+### Features
+
+* always build docker images on tag ([#11](https://github.com/equinor/radix-prometheus-proxy/issues/11)) ([a3439c6](https://github.com/equinor/radix-prometheus-proxy/commit/a3439c6211b47c3607da0fa9173cb5542b4fbe05))
+
 ## [1.2.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.1.0...v1.2.0) (2024-10-11)
 
 
