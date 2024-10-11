@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.0](https://github.com/equinor/radix-prometheus-proxy/compare/v0.1.0...v1.0.0) (2024-10-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* First working prometheus proxy ([#1](https://github.com/equinor/radix-prometheus-proxy/issues/1))
+
+### Features
+
+* First working prometheus proxy ([#1](https://github.com/equinor/radix-prometheus-proxy/issues/1)) ([25e4ab3](https://github.com/equinor/radix-prometheus-proxy/commit/25e4ab36bd52fdc4c238d534e40ec32efbb222c7))
+
+
+### Bug Fixes
+
+* add latest tags ([4563aa0](https://github.com/equinor/radix-prometheus-proxy/commit/4563aa096dcb905332d287a5566e4542981da8a2))
+
 ## 0.1.0 (2024-10-11)
 
 
