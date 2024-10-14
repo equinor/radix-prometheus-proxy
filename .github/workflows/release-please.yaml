@@ -21,9 +21,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: googleapis/release-please-action@v4
         id: release
-      - run: echo "${{steps.release.outputs.version}}"
-      - run: echo "${{steps.release.outputs.release_created}}"
-      - run: echo "${{steps.release.outputs.tag_name}}"
 
   release-container:
     runs-on: ubuntu-latest
@@ -34,9 +31,8 @@ jobs:
       IMAGE_NAME: ${{ github.repository }}
       TAG: ${{ needs.release-please.outputs.version }}
     steps:
-      - run: echo "${{needs.release-please.outputs.version}}"
-      - run: echo "${{needs.release-please.outputs.release_created}}"
       - uses: actions/checkout@v4
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -64,10 +60,12 @@ jobs:
     if: ${{needs.release-please.outputs.release_created == 'true'}}
     steps:
       - uses: actions/checkout@v4
+
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
       - name: Install Helm
         uses: azure/setup-helm@v4
         env:
