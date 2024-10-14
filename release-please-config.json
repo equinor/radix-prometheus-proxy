@@ -9,6 +9,11 @@
           "type": "yaml",
           "path": "charts/radix-prometheus-proxy/Chart.yaml",
           "jsonpath": "$.version"
+        },
+        {
+          "type": "yaml",
+          "path": "charts/radix-prometheus-proxy/Chart.yaml",
+          "jsonpath": "$.appVersion"
         }
       ]
     }
