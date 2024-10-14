@@ -3,9 +3,11 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"maps"
 	"net/http"
 	"os"
 	"os/signal"
+	"slices"
 	"time"
 
 	prometheusApi "github.com/prometheus/client_golang/api"
@@ -26,6 +28,7 @@ func main() {
 
 	router := NewRouter(promController)
 
+	log.Ctx(ctx).Info().Strs("queries", slices.Collect(maps.Keys(queries))).Msg("Found queries")
 	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query/{query}", config.Port)
 	err := Serve(ctx, config.Port, router)
 	log.Err(err).Msg("Terminated")
