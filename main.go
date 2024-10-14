@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
+	"os"
 	"os/signal"
 	"time"
 
@@ -12,32 +13,53 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/rs/zerolog/log"
 	"golang.org/x/sys/unix"
+	"gopkg.in/yaml.v2"
 )
-
-var query = `min_over_time(probe_success{instance="https://api.dev.radix.equinor.com/health/"}[5m])`
 
 func main() {
 	ctx, cancel := signal.NotifyContext(context.Background(), unix.SIGTERM, unix.SIGINT)
 	defer cancel()
 
 	config := MustParseConfig()
-	promController := NewPrometheusController(config)
+	queries := mustParseQueryFile(config.QueriesFile)
+	promController := NewPrometheusController(config.Prometheus.String(), queries)
+
 	router := NewRouter(promController)
 
-	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query", config.Port)
+	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query/{query}", config.Port)
 	err := Serve(ctx, config.Port, router)
 	log.Err(err).Msg("Terminated")
 }
 
-func NewPrometheusController(config Config) RouteMapper {
-	apiClient, err := prometheusApi.NewClient(prometheusApi.Config{Address: config.Prometheus.String()})
+func mustParseQueryFile(queriesFile string) map[string]string {
+	queries := map[string]string{}
+	content, err := os.ReadFile(queriesFile)
+	if err != nil {
+		log.Fatal().Err(err).Msg("unable to read queries file")
+	}
+
+	if err = yaml.Unmarshal(content, &queries); err != nil {
+		log.Fatal().Err(err).Msg("unable to parse queries file")
+	}
+	return queries
+}
+
+func NewPrometheusController(prometheusUrl string, queries map[string]string) RouteMapper {
+	apiClient, err := prometheusApi.NewClient(prometheusApi.Config{Address: prometheusUrl})
 	if err != nil {
 		log.Fatal().Err(err).Msg("failed to create the Prometheus API client")
 	}
 	api := prometheusV1.NewAPI(apiClient)
 
 	return func(mux *http.ServeMux) {
-		mux.HandleFunc("/query", func(w http.ResponseWriter, r *http.Request) {
+		mux.HandleFunc("/query/{query}", func(w http.ResponseWriter, r *http.Request) {
+			query, ok := queries[r.PathValue("query")]
+			if !ok {
+				w.WriteHeader(http.StatusNotFound)
+				_, _ = w.Write([]byte("Query not found"))
+				return
+			}
+
 			logger := log.Ctx(r.Context())
 			//
 			end := time.Now()

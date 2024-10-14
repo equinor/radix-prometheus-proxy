@@ -21,6 +21,7 @@ RUN go build -ldflags "-s -w" -a -installsuffix cgo -o /radix-prometheus-proxy
 FROM gcr.io/distroless/static
 
 COPY --from=builder /radix-prometheus-proxy /radix-prometheus-proxy
+COPY queries.yaml /queries.yaml
 
 EXPOSE 8000
 USER 1000
