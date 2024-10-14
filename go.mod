@@ -11,10 +11,12 @@ require (
 	github.com/rs/zerolog v1.33.0
 	github.com/urfave/negroni v1.0.0
 	golang.org/x/sys v0.22.0
+	sigs.k8s.io/yaml v1.4.0
 )
 
 require (
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

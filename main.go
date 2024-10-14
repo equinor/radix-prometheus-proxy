@@ -13,7 +13,7 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/rs/zerolog/log"
 	"golang.org/x/sys/unix"
-	"gopkg.in/yaml.v2"
+	"sigs.k8s.io/yaml"
 )
 
 func main() {
