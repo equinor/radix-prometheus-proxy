@@ -12,9 +12,6 @@ name: Release
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    env:
-      REGISTRY: ghcr.io
-      IMAGE_NAME: ${{ github.repository }}
     outputs:
       version: "${{steps.release.outputs.version }}"
       release_created: "${{steps.release.outputs.release_created == 'true' }}"
@@ -27,6 +24,9 @@ jobs:
   release-container:
     runs-on: ubuntu-latest
     needs: release-please
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
     steps:
       - run: echo "${{needs.release-please.outputs.version}}"
       - run: echo "${{needs.release-please.outputs.release_created}}"
