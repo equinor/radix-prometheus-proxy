@@ -43,6 +43,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Go Build Cache for Docker
+        uses: actions/cache@v4
+        with:
+          path: go-build-cache
+          key: ${{ runner.os }}-go-build-cache-${{ hashFiles('**/go.sum') }}
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
@@ -53,6 +59,8 @@ jobs:
           platforms: |
             linux/amd64
             linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   release-helm:
     runs-on: ubuntu-latest
