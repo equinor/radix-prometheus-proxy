@@ -48,11 +48,34 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern=${{ env.TAG }}
             type=raw,value=latest-{{date 'YYYYMMDDHHmmss'}}-{{sha}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
+        if: ${{needs.release-please.outputs.release_created == 'true'}}
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+          platforms: |
+            linux/amd64
+            linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        if: ${{ needs.release-please.outputs.release_created != 'true' }}
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest-{{date 'YYYYMMDDHHmmss'}}-{{sha}}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        if: ${{ needs.release-please.outputs.release_created != 'true' }}
         with:
           context: .
           file: ./Dockerfile

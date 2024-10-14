@@ -23,18 +23,18 @@ func main() {
 	defer cancel()
 
 	config := MustParseConfig()
-	queries := mustParseQueryFile(config.QueriesFile)
+	queries := MustParseQueryFile(config.QueriesFile)
 	promController := NewPrometheusController(config.Prometheus.String(), queries)
 
 	router := NewRouter(promController)
 
-	log.Ctx(ctx).Info().Strs("queries", slices.Collect(maps.Keys(queries))).Msg("Found queries")
+	log.Ctx(ctx).Info().Strs("found queries", slices.Collect(maps.Keys(queries))).Send()
 	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query/{query}", config.Port)
 	err := Serve(ctx, config.Port, router)
 	log.Err(err).Msg("Terminated")
 }
 
-func mustParseQueryFile(queriesFile string) map[string]string {
+func MustParseQueryFile(queriesFile string) map[string]string {
 	queries := map[string]string{}
 	content, err := os.ReadFile(queriesFile)
 	if err != nil {
