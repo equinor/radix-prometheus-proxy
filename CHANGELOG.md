@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.7.0...v1.7.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* helm release ([a54b5f3](https://github.com/equinor/radix-prometheus-proxy/commit/a54b5f36cc1b8314d90cfc17cedd24d528cd9716))
+
 ## [1.7.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.6.0...v1.7.0) (2024-10-14)
 
 
