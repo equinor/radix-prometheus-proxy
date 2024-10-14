@@ -23,6 +23,10 @@ jobs:
         with:
           skip-github-pull-request: true
 
+      - run: echo "${{steps.release.outputs.release-created}}"
+      - run: echo "${{steps.release.outputs.release-created == 'true'}}"
+      - run: echo "${{steps.release.outputs.version }}"
+
       # Docker build
       - name: Set up Docker Buildx
         if: ${{ steps.release.outputs.release_created == 'true' }}
