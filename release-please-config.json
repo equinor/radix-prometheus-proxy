@@ -1,13 +1,15 @@
 {
   "packages": {
-    "charts/radix-prometheus-proxy": {
-      "release-type": "helm",
-      "package-name": "radix-prometheus-proxy-chart"
-    },
     ".": {
       "changelog-path": "CHANGELOG.md",
       "initial-version": "0.1.0",
-      "release-type": "simple"
+      "release-type": "simple",
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "charts/radix-prometheus-proxy/Chart.yaml",
+          "jsonpath": "$.version"
+        }]
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
