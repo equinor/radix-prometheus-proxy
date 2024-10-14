@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.3...v1.6.0) (2024-10-14)
+
+
+### Features
+
+* cleanup workflow, always build 'nightly' containers ([6529311](https://github.com/equinor/radix-prometheus-proxy/commit/65293116f0c1573c8850a6020ef9dcb1bd6198b0))
+
 ## [1.5.3](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.2...v1.5.3) (2024-10-14)
 
 
