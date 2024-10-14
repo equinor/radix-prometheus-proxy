@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.6.0...v1.7.0) (2024-10-14)
+
+
+### Features
+
+* go build cache ([7682e88](https://github.com/equinor/radix-prometheus-proxy/commit/7682e884c1545276721f46efc73a4278d0940aa9))
+
 ## [1.6.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.3...v1.6.0) (2024-10-14)
 
 
