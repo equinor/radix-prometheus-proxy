@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.9.0...v1.9.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* manage nightly/release tags differently ([bd506ac](https://github.com/equinor/radix-prometheus-proxy/commit/bd506ac0ac9ef332d8826b67464e5d6ce336be12))
+* manage nightly/release tags differently ([36aabf1](https://github.com/equinor/radix-prometheus-proxy/commit/36aabf14dcff3463b59610a79b3da30926f4aa0e))
+
 ## [1.9.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.8.0...v1.9.0) (2024-10-14)
 
 
