@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.0...v1.5.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* cleanup workflow, fix permissions ([c5259fb](https://github.com/equinor/radix-prometheus-proxy/commit/c5259fbe57774d028f8be2433c11a3be6ebae4c3))
+* cleanup workflow, fix permissions ([8deb3f0](https://github.com/equinor/radix-prometheus-proxy/commit/8deb3f066f0bdc91c9320b4fa88eb7e8af1f8710))
+
 ## [1.5.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.4.0...v1.5.0) (2024-10-14)
 
 
