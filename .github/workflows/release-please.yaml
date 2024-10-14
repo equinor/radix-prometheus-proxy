@@ -20,12 +20,10 @@ jobs:
 
       - uses: googleapis/release-please-action@v4
         id: release
-        with:
-          skip-github-pull-request: true
+
 
       - run: echo "${{steps.release.outputs.release-created}}"
       - run: echo "${{steps.release.outputs.release-created == 'true'}}"
-      - run: echo "${{toJSON(steps.release.outputs)}}"
 
       # Docker build
       - name: Set up Docker Buildx
