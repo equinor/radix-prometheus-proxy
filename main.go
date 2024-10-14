@@ -24,7 +24,7 @@ func main() {
 	promController := NewPrometheusController(config)
 	router := NewRouter(promController)
 
-	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query", config.Port)
+	log.Ctx(ctx).Info().Msgf("Starting server on http://localhost:%d/query...", config.Port)
 	err := Serve(ctx, config.Port, router)
 	log.Err(err).Msg("Terminated")
 }
