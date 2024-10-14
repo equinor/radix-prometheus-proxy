@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.7.2](https://github.com/equinor/radix-prometheus-proxy/compare/v1.7.1...v1.7.2) (2024-10-14)
+
+
+### Bug Fixes
+
+* avoid duplicate docker builds ([77a6fbb](https://github.com/equinor/radix-prometheus-proxy/commit/77a6fbbd5bf69d3b185f1bf0c5865d1488bd974c))
+* avoid duplicate docker builds ([f56721d](https://github.com/equinor/radix-prometheus-proxy/commit/f56721dcb976637e17541f630a74404380cf886e))
+* avoid duplicate docker builds ([a23e619](https://github.com/equinor/radix-prometheus-proxy/commit/a23e61907c2f4e7c4f627dfc15d3f657ace48e6f))
+* duplicate docker builds ([04bfc9e](https://github.com/equinor/radix-prometheus-proxy/commit/04bfc9edd646e4ac52a3a112a79e6630163c13fb))
+* remove pr docker builds ([69c0cb7](https://github.com/equinor/radix-prometheus-proxy/commit/69c0cb75b8d0d3251d81bdbcc176997a10854dcf))
+
 ## [1.7.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.7.0...v1.7.1) (2024-10-14)
 
 
