@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.1...v1.5.2) (2024-10-14)
+
+
+### Bug Fixes
+
+* dont run release step if no release created ([00d3651](https://github.com/equinor/radix-prometheus-proxy/commit/00d36511b9a66d62b221d15da6d35c4f7d4f5fea))
+
 ## [1.5.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.5.0...v1.5.1) (2024-10-14)
 
 
