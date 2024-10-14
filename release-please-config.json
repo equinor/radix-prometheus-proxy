@@ -9,7 +9,8 @@
           "type": "yaml",
           "path": "charts/radix-prometheus-proxy/Chart.yaml",
           "jsonpath": "$.version"
-        }]
+        }
+      ]
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
