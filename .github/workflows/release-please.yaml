@@ -62,6 +62,8 @@ jobs:
     if: ${{needs.release-please.outputs.release_created == 'true'}}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # important parameter
 
       - name: Configure Git
         run: |
