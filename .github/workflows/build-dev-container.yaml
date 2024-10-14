@@ -1,6 +1,11 @@
 name: Build Dev Images
 
 on:
+  release:
+    types:
+      - released
+      - created
+      - published
   push:
     branches:
       - main
