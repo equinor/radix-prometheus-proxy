@@ -23,9 +23,6 @@ jobs:
         with:
           skip-github-pull-request: true
 
-      - run: |
-          echo "${{ toJSON(steps.release.outputs) }}"
-
       # Docker build
       - name: Set up Docker Buildx
         if: ${{ steps.release.outputs.release_created }}
