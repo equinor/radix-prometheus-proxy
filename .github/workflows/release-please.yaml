@@ -20,6 +20,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: googleapis/release-please-action@v4
         id: release
+      - run: echo "${{toJSON(steps.release.outputs.version)}}"
+      - run: echo "${{toJSON(steps.release.outputs.release_created)}}"
+      - run: echo "${{toJSON(steps.release.outputs.tag_name)}}"
 
   release-container:
     runs-on: ubuntu-latest
