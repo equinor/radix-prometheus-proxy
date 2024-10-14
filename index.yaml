@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  radix-prometheus-proxy:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-10-14T06:59:09.710337716Z"
+    description: Simple Prometheus Proxy to expose a simple metric
+    digest: 4b21deb5a2335fc7cf06880ce700b1149f0ddfce1c2423cf8b1c980b70f85b57
+    home: radix.equinor.com
+    icon: https://radix.equinor.com/images/logos/logo.svg
+    keywords:
+    - radix
+    kubeVersion: '>=1.24.0'
+    maintainers:
+    - email: Radix@StatoilSRM.onmicrosoft.com
+      name: Omnia Radix
+    name: radix-prometheus-proxy
+    sources:
+    - https://github.com/equinor/radix-prometheus-proxy
+    urls:
+    - https://github.com/equinor/radix-prometheus-proxy/releases/download/radix-prometheus-proxy-1.1.0/radix-prometheus-proxy-1.1.0.tgz
+    version: 1.1.0
+generated: "2024-10-14T06:59:09.710342946Z"
