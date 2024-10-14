@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.3.1...v1.4.0) (2024-10-14)
+
+
+### Features
+
+* release-please.yaml output ([7044cbc](https://github.com/equinor/radix-prometheus-proxy/commit/7044cbcc0f20a5788976fa2f736397c5ee582c88))
+
+
+### Bug Fixes
+
+* compare strings ([44012a7](https://github.com/equinor/radix-prometheus-proxy/commit/44012a7cb9feaffda8ba2d5297112eaa632eb346))
+* release-please.yaml create PR ([b2d119f](https://github.com/equinor/radix-prometheus-proxy/commit/b2d119fcea65945b574102ddaffd6537dbbec5de))
+* release-please.yaml output test 2 ([480c21a](https://github.com/equinor/radix-prometheus-proxy/commit/480c21ab2aced93cdccc0d170a478ed011aba461))
+
 ## [1.3.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.3.0...v1.3.1) (2024-10-14)
 
 
