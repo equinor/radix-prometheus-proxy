@@ -25,7 +25,7 @@ jobs:
 
       - run: echo "${{steps.release.outputs.release-created}}"
       - run: echo "${{steps.release.outputs.release-created == 'true'}}"
-      - run: echo "${{steps.release.outputs.version }}"
+      - run: echo "${{toJSON(steps.release.outputs)}}"
 
       # Docker build
       - name: Set up Docker Buildx
