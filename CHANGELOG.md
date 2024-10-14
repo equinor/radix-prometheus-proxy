@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.8.0...v1.9.0) (2024-10-14)
+
+
+### Features
+
+* log list of queries found ([b6681f5](https://github.com/equinor/radix-prometheus-proxy/commit/b6681f5befb3c01f3fc3e8fd276a22c5aa577187))
+
 ## [1.8.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.7.2...v1.8.0) (2024-10-14)
 
 
