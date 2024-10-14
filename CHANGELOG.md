@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.4.0...v1.5.0) (2024-10-14)
+
+
+### Features
+
+* split up workflow in multiple parts ([356e6d1](https://github.com/equinor/radix-prometheus-proxy/commit/356e6d1b2d27c389fd8efdc850a97e046abd8579))
+
+
+### Bug Fixes
+
+* ghcr login ([da9840b](https://github.com/equinor/radix-prometheus-proxy/commit/da9840be3873e8805f0ea114d2f4e512e78309a3))
+
 ## [1.4.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.3.1...v1.4.0) (2024-10-14)
 
 
