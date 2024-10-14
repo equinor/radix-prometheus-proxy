@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.3.0...v1.3.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* always build docker images on release ([b934b29](https://github.com/equinor/radix-prometheus-proxy/commit/b934b29030158c71dd9e4ca4940dddcd728b8b00))
+* always build docker images on release ([#13](https://github.com/equinor/radix-prometheus-proxy/issues/13)) ([fc75bca](https://github.com/equinor/radix-prometheus-proxy/commit/fc75bca24afa3b8172bf65798150c020a27ed88f))
+* bump helm chart version ([b934b29](https://github.com/equinor/radix-prometheus-proxy/commit/b934b29030158c71dd9e4ca4940dddcd728b8b00))
+* bump helm chart version ([b934b29](https://github.com/equinor/radix-prometheus-proxy/commit/b934b29030158c71dd9e4ca4940dddcd728b8b00))
+* json formatting ([2c31f8f](https://github.com/equinor/radix-prometheus-proxy/commit/2c31f8f2c55bc8a075c574dd506ddf3255d8fc95))
+
 ## [1.3.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.2.0...v1.3.0) (2024-10-11)
 
 
