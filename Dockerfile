@@ -1,7 +1,10 @@
 FROM --platform=$BUILDPLATFORM golang:1.23-alpine3.20 AS builder
 # Define target arch variables so we can use them while crosscompiling, will be set automatically
-ARG TARGETOS
 ARG TARGETARCH
+ENV CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=${TARGETARCH}
+
 WORKDIR /go/src/
 
 # get dependencies
@@ -12,7 +15,7 @@ RUN go mod download
 COPY . .
 
 # Build project
-RUN GOOS=$TARGETOS GOARCH=$TARGETARCH CGO_ENABLED=0 go build -ldflags "-s -w" -a -installsuffix cgo -o /radix-prometheus-proxy
+RUN go build -ldflags "-s -w" -a -installsuffix cgo -o /radix-prometheus-proxy
 
 # Final stage, ref https://github.com/GoogleContainerTools/distroless/blob/main/base/README.md for distroless
 FROM gcr.io/distroless/static
