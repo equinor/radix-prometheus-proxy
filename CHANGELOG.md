@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.9.1...v1.10.0) (2024-10-15)
+
+
+### Features
+
+* map dns zone to query ([c7fc17e](https://github.com/equinor/radix-prometheus-proxy/commit/c7fc17e58f81724ce647520375e75528a2e7c2fb))
+
 ## [1.9.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.9.0...v1.9.1) (2024-10-14)
 
 
