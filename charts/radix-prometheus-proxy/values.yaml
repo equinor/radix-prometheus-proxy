@@ -22,10 +22,10 @@ prometheusUrl: ""
 resources:
   limits:
     cpu: 50m
-    memory: 10Mi
+    memory: 20Mi
   requests:
     cpu: 50m
-    memory: 10Mi
+    memory: 20Mi
 
 # Affinity for pod scheduling
 affinity: {}
