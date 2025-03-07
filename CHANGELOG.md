@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.0...v1.10.1) (2025-03-07)
+
+
+### Bug Fixes
+
+* increase memory limit ([#32](https://github.com/equinor/radix-prometheus-proxy/issues/32)) ([f7ab11e](https://github.com/equinor/radix-prometheus-proxy/commit/f7ab11e052cea70a158f9f4323b0fa62ea3f98d4))
+
 ## [1.10.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.9.1...v1.10.0) (2024-10-15)
 
 
