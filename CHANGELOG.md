@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.3](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.2...v1.10.3) (2025-03-10)
+
+
+### Bug Fixes
+
+* update ingress.api.yaml to format hosts as a list ([#38](https://github.com/equinor/radix-prometheus-proxy/issues/38)) ([2d56796](https://github.com/equinor/radix-prometheus-proxy/commit/2d56796ecd907539f41eb548818cef76bd449e3d))
+
 ## [1.10.2](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.1...v1.10.2) (2025-03-10)
 
 
