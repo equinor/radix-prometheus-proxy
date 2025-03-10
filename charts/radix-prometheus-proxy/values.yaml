@@ -19,6 +19,9 @@ logLevel: info
 logPretty: "False"
 prometheusUrl: ""
 
+ingress:
+  hosts: []
+
 resources:
   limits:
     cpu: 50m
