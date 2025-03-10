@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.2](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.1...v1.10.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* fix ingress chart ([d9b5dd5](https://github.com/equinor/radix-prometheus-proxy/commit/d9b5dd5dbc74a8b99b5329bbf0f6a9706abdc13b))
+* move flux variables to flux ([#35](https://github.com/equinor/radix-prometheus-proxy/issues/35)) ([4ea2fc8](https://github.com/equinor/radix-prometheus-proxy/commit/4ea2fc8a1ddea7b954429a55249073bdac72a99d))
+
 ## [1.10.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.0...v1.10.1) (2025-03-07)
 
 
