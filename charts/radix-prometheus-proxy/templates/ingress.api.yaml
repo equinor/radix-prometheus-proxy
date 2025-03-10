@@ -1,25 +1,31 @@
+{{ if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  {{- with .Values.ingress.annotations }}
   annotations:
     ingress.kubernetes.io/force-ssl-redirect: "true"
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   name: server.custom-domain
   namespace: {{ .Release.Namespace | quote }}
 spec:
   ingressClassName: nginx
   rules:
-    {{- range .Values.ingress.hosts }}
-    - host: {{.}}
+    {{- range $index, $host := .Values.ingress.hosts }}
+    - host: {{$host}}
       http:
         paths:
           - path: "/"
             pathType: Prefix
             backend:
               service:
-                name: server
+                name: {{ include "prometheus-proxy.fullname" $ }}
                 port:
-                  number: 3002
-  {{- end }}
+                  number: 8000
+    {{- end }}
   tls:
     - hosts: {{.Values.ingress.hosts }}
-      secretName: "radix-wildcard-tls-cert"
+      secretName: {{.Values.ingress.certSecretName | quote }}
+
+{{- end }}

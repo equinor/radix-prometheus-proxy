@@ -20,7 +20,11 @@ logPretty: "False"
 prometheusUrl: ""
 
 ingress:
+  enabled: true
   hosts: []
+  annotations: {}
+  certSecretName: "prometheus-proxy-tls-cert"
+
 
 resources:
   limits:
