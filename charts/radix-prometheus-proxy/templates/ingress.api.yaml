@@ -25,7 +25,10 @@ spec:
                   number: 8000
     {{- end }}
   tls:
-    - hosts: {{.Values.ingress.hosts }}
+    - hosts:
+      {{- range .Values.ingress.hosts }}
+      - {{ . | quote}}
+      {{- end }}
       secretName: {{.Values.ingress.certSecretName | quote }}
 
 {{- end }}
