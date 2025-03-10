@@ -21,12 +21,9 @@ prometheusUrl: ""
 
 ingress:
   enabled: true
-  hosts:
-  - uptime.radix.no
-  - uptime.test.radix.no
-  annotations:
-    cert-manager.io/cluster-issuer: ${RADIX_WILDCARD_CERTIFICATE_ISSUER}
-  certSecretName: "radix-wildcard-tls-cert"
+  hosts: []
+  annotations: {}
+  certSecretName: "prometheus-proxy-tls-cert"
 
 
 resources:
