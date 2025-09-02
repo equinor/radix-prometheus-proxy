@@ -22,6 +22,5 @@ jobs:
       branch: main
       cliff-config-path: cliff.toml
       generate-pre-release-pr: true
-      pre-release-version-prefix: rc
       extra-files: |
         charts/radix-prometheus-proxy/Chart.yaml
