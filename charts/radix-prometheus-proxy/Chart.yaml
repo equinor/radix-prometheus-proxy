@@ -2,8 +2,8 @@ apiVersion: v2
 name: radix-prometheus-proxy
 icon: https://radix.equinor.com/images/logos/logo.svg
 description: Simple Prometheus Proxy to expose a simple metric
-version: 1.11.0 # x-patch-semver
-appVersion: 1.11.0 # x-patch-semver
+version: 1.11.0-rc.1 # x-patch-semver
+appVersion: 1.11.0-rc.1 # x-patch-semver
 kubeVersion: '>=1.24.0'
 keywords:
   - radix
