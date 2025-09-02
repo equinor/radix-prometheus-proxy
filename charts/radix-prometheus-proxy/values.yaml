@@ -5,7 +5,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: ghcr.io/equinor/radix-prometheus-proxy
+  repository: ghcr.io/equinor/radix/prometheus-proxy
   tag: ""
   pullPolicy: Always
 
