@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.11.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.11.0..v1.11.1) - 2025-09-03
+
+### 🐛 Bug Fixes
+
+- *(chart)* Use AppVersion in app.kubernetes.io/version label (#46) - ([7c93c56](https://github.com/equinor/radix-prometheus-proxy/commit/7c93c56f75377ec25fd3f2ad230ad325df49ecf6)) by @nilsgstrabo in [#46](https://github.com/equinor/radix-prometheus-proxy/pull/46)
+
+
 ## [1.11.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.10.3..v1.11.0) - 2025-09-02
 
 ### 🚀 Features
