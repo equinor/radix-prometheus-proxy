@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.11.1..v1.12.0) - 2025-12-29
+
+### 🚀 Features
+
+- C3 env (#49) - ([0ad36bf](https://github.com/equinor/radix-prometheus-proxy/commit/0ad36bfd0e9a7ca91c6c670b80e6635b8c165ea7)) by @Richard87 in [#49](https://github.com/equinor/radix-prometheus-proxy/pull/49)
+
+
 ## [1.11.1](https://github.com/equinor/radix-prometheus-proxy/compare/v1.11.0..v1.11.1) - 2025-09-03
 
 ### 🐛 Bug Fixes
