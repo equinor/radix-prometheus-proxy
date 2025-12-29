@@ -2,3 +2,4 @@ dev.radix.equinor.com: min_over_time(probe_success{instance="https://api.dev.rad
 playground.radix.equinor.com: min_over_time(probe_success{instance="https://api.playground.radix.equinor.com/health/"}[5m])
 radix.equinor.com: min_over_time(probe_success{instance="https://api.radix.equinor.com/health/"}[5m])
 c2.radix.equinor.com: min_over_time(probe_success{instance="https://api.c2.radix.equinor.com/health/"}[5m])
+c3.radix.equinor.com: min_over_time(probe_success{instance="https://api.c3.radix.equinor.com/health/"}[5m])
