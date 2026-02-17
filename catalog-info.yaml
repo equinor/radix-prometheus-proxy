@@ -2,9 +2,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: radix-prometheus-proxy
+  title: Radix Prometheus Proxy
+  description: "Export selected prometheus query results"
   annotations:
     github.com/project-slug: equinor/radix-prometheus-proxy
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: production
   owner: team-radix
+  system: system:default/Radix
