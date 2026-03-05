@@ -1,4 +1,6 @@
-{{- range $name, $route := .Values.route }}
+{{- $routes := .Values.route }}
+{{- range $name := keys $routes | sortAlpha }}
+{{- $route := index $routes $name }}
 {{- if $route.enabled }}
 ---
 apiVersion: gateway.networking.k8s.io/v1
