@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.23-alpine3.20 AS builder
+FROM --platform=$BUILDPLATFORM golang:1.26-alpine3.23 AS builder
 # Define target arch variables so we can use them while crosscompiling, will be set automatically
 ARG TARGETARCH
 ENV CGO_ENABLED=0 \
