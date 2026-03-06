@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.13.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.12.0..v1.13.0) - 2026-03-06
+
+### 🚀 Features
+
+- *(chart)* Add support for HTTPRoute in Helm chart (#56) - ([9424177](https://github.com/equinor/radix-prometheus-proxy/commit/942417731a6c2c030f4668ff55fe76a4b12dbf99)) by @nilsgstrabo in [#56](https://github.com/equinor/radix-prometheus-proxy/pull/56)
+
+
+### 📚 Documentation
+
+- Add catalog-info.yaml config file (#53) - ([eb63dee](https://github.com/equinor/radix-prometheus-proxy/commit/eb63dee0ee87a9a39a24fc908151242c237fb23c)) by @emirgens in [#53](https://github.com/equinor/radix-prometheus-proxy/pull/53)
+
+
 ## [1.12.0](https://github.com/equinor/radix-prometheus-proxy/compare/v1.11.1..v1.12.0) - 2025-12-29
 
 ### 🚀 Features
