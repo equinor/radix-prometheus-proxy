@@ -10,9 +10,9 @@ jobs:
     permissions:
       contents: read
     steps:
-    - uses: actions/checkout@v6
-    - name: Build docker image
-      run: docker build .
+      - uses: actions/checkout@v6
+      - name: Build docker image
+        run: docker build .
 
   lint:
     name: Lint
